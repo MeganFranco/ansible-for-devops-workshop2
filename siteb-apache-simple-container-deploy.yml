@@ -1,4 +1,4 @@
--name: Deploy Site-B
+- name: Deploy Site-B
   hosts: siteb
   become: yes
 
@@ -10,6 +10,6 @@
   - name: launch the apache-simple container on the site-b nodes
     docker_container:
       name: apache-simple
-      image: quay.io/|student_name|/ansible-for-devops-siteb
+      image: quay.io/meganfranco/ansible-for-devops-siteb
       ports:
         - "8080:8080"
